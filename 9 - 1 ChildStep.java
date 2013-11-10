@@ -7,8 +7,8 @@
 
 public class ChildStep {
 
-    public static int childStep (int Step[], int stair ) {
-        int pw[] = new int[stair+1];
+    public static long childStep (final int Step[], final int stair ) {
+        long pw[] = new long[stair+1];
         pw[0]=1;
         for (int i = 1; i <= stair; i++){
             for(int j = 0; j < Step.length; j++){
@@ -22,7 +22,7 @@ public class ChildStep {
 
     public static void main(String[] args) {
         int step[] = {1, 2, 3};
-        int stair = 10;
+        int stair = 100;
         System.out.println(childStep(step, stair));
     }
 }
