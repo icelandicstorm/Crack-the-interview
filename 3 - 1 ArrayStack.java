@@ -1,11 +1,12 @@
 /**
- * Created with IntelliJ IDEA.
  * User: xijing2000
  * Date: 10/19/13
  * Time: 2:49 30PM
- * To change this template use File | Settings | File Templates.
  */
 
+/**
+ * Describe how you could use a single array to implement three stacks
+ */
 public class ArrayStack {
 
    static int ArraySize = 300;
@@ -14,14 +15,14 @@ public class ArrayStack {
    private int stackNum;
 
    public ArrayStack(int stackNum) {
-       this.stackNum=stackNum;
+       this.stackNum = stackNum;
        pHead[stackNum-1] = (ArraySize/3*stackNum-100)-1;
    }
 
    public Object Pop() {
        Object item;
        int head = pHead[stackNum-1];
-       if( array[head] != null)
+       if (array[head] != null)
        {
            item = array[head];
            pHead[stackNum-1] = head-1;
@@ -34,10 +35,10 @@ public class ArrayStack {
     public void Push(Object newItem) {
         Object item;
         int head = pHead[stackNum-1];
-        if(head < pHead[stackNum])
+        if (head < pHead[stackNum])
         {
-          head=head+1;
-          array [head] = newItem;
+          head = head + 1;
+          array[head] = newItem;
           pHead[stackNum-1] = head;
         }
         else {
@@ -48,8 +49,8 @@ public class ArrayStack {
 
     public Object Peek() {
         Object item;
-        int head= pHead[stackNum-1];
-        if( array[head]!= null)
+        int head = pHead[stackNum-1];
+        if ( array[head] != null)
         {
             item = array[head];
             return item;
@@ -62,9 +63,8 @@ public class ArrayStack {
         int tail = (ArraySize/3*stackNum-100);
         System.out.println("The tail of the Stack is " + tail);
         System.out.println("  The head of the Stack is " + head);
-        for(int i = tail; i <= head; i++)
+        for (int i = tail; i <= head; i++)
         {
-
            System.out.println(array[i]);
         }
     }
@@ -75,7 +75,7 @@ public class ArrayStack {
         ArrayStack arrayStack2 = new ArrayStack(2);
         ArrayStack arrayStack3 = new ArrayStack(3);
 
-        for(int i=1; i<10; i++){
+        for (int i=1; i<10; i++) {
             arrayStack1.Push(i);
         }
         arrayStack1.Print();

@@ -1,10 +1,13 @@
 /**
- * Created with IntelliJ IDEA.
  * User: xijing2000
  * Date: 11/9/13
  * Time: 10:48 36PM
  */
 
+/**
+ * a child is running up a staircase with n steps, can hop either 1 step, 2steps, 3 steps
+ * how many possible ways the child can run up the stairs
+ */
 public class ChildStep {
 
     public static long childStep (final int Step[], final int stair ) {
@@ -22,7 +25,7 @@ public class ChildStep {
 
     public static void main(String[] args) {
         int step[] = {1, 2, 3};
-        int stair = 100;
+        int stair = 90;
         System.out.println(childStep(step, stair));
     }
 }
